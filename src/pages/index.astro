@@ -50,10 +50,11 @@ const structuredData = {
         </button>
         <nav class="toolbar-nav" id="toolbar-nav" aria-label="Primary navigation">
           <button class="drawer-close" id="toolbar-close" type="button" aria-label="Close navigation menu">×</button>
-          <a href="#about">About</a>
+          <a href="#summary">Summary</a>
+          <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
           <a href="#awards">Awards</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -75,10 +76,10 @@ const structuredData = {
         <div class="hero-content">
           <span class="subtle-label">Software Engineer • Angular Specialist</span>
           <h1 class="hero-title">
-            Building high-performance Angular experiences for modern commerce and marketing products.
+            Building high-performance Angular experiences for commerce and marketing products.
           </h1>
           <p class="hero-copy">
-            Angular Developer with 3+ years of experience building scalable SPAs using Angular 15+, TypeScript, RxJS, and Angular Material. Proven track record of improving performance, reducing bugs, and shipping customer-focused features in Agile teams.
+            Angular Developer with 3+ years of experience building scalable SPAs using Angular 15+, TypeScript, RxJS, and Angular Material. Proven track record of reducing page load times by 70%, cutting production bugs by 30%, and shipping 12+ features per sprint in Agile teams.
           </p>
           <div class="cta-group">
             <a class="button" href="/resume.pdf" download>Download Resume</a>
@@ -87,43 +88,83 @@ const structuredData = {
         </div>
       </section>
 
-      <section class="section fade-in" id="about">
-        <div class="section-title"><h2>About Me</h2></div>
+      <section class="section fade-in" id="summary">
+        <div class="section-title"><h2>Professional Summary</h2></div>
+        <div class="experience-highlight">
+          <div class="experience-badge">
+            <span>3+</span>
+            <span>Years</span>
+          </div>
+          <div class="card experience-copy">
+            <p>
+              UI/UX-minded Angular Developer with 3+ years of experience building scalable SPAs using Angular 15+, TypeScript, RxJS, and Angular Material. Proven track record of reducing page load times by 70%, cutting production bugs by 30%, and delivering 12+ features per sprint in Agile teams.
+            </p>
+            <ul class="card-list">
+              <li>Experienced in Node.js, PostgreSQL, REST API & GraphQL integration, and 85%+ unit test coverage with Jest/Jasmine/Karma.</li>
+              <li>Delivered reusable front-end architecture while improving accessibility and responsive performance.</li>
+              <li>Built high-impact applications for commerce and marketing workflows with international readiness.</li>
+            </ul>
+            <div class="tag-grid" style="margin-top:24px;">
+              <span class="skill-chip">Angular 15+</span>
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">RxJS</span>
+              <span class="skill-chip">Angular Material</span>
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in" id="skills">
+        <div class="section-title"><h2>Skills & Technologies</h2></div>
         <div class="card">
-          <p>
-            I help teams move fast without sacrificing stability. At Centizen, I launched and scaled Angular applications used by marketing and commerce teams, delivering faster page loads, stronger test coverage, and reusable architecture that keeps development predictable.
-          </p>
-          <div class="tag-grid" style="margin-top:24px;">
+          <div class="tag-grid">
             <span class="skill-chip">Angular 15+</span>
             <span class="skill-chip">TypeScript</span>
             <span class="skill-chip">RxJS</span>
-            <span class="skill-chip">Node.js</span>
-            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Angular Material</span>
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS3</span>
+            <span class="skill-chip">Responsive Design</span>
             <span class="skill-chip">PWA</span>
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Express.js</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">GraphQL</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Sequelize</span>
+            <span class="skill-chip">Jest</span>
+            <span class="skill-chip">Cypress</span>
+            <span class="skill-chip">Git / GitLab</span>
+            <span class="skill-chip">CI/CD</span>
+            <span class="skill-chip">Agile / Scrum</span>
           </div>
         </div>
       </section>
 
       <section class="section fade-in" id="experience">
-        <div class="section-title"><h2>Experience</h2></div>
+        <div class="section-title"><h2>Professional Experience</h2></div>
         <div class="grid grid-2">
           <article class="card">
             <h3 class="card-title">Centizen, Inc.</h3>
-            <p class="card-subtitle">Software Engineer | Frontend Developer</p>
+            <p class="card-subtitle">Zenbasket Marketing Portal | Angular 15+, TypeScript, RxJS, REST APIs</p>
+            <p class="card-subtitle">Feb 2023 – Present</p>
             <ul class="card-list">
-              <li>Launched a marketing portal from scratch with a reusable Angular component library, reducing feature development time by 25%.</li>
-              <li>Integrated Razorpay and Stripe for multi-currency checkout, improving conversion rates by 18%.</li>
-              <li>Refactored legacy Angular modules with lazy loading and bundle splitting, improving rendering speed by 20%.</li>
+              <li>Launched a marketing portal from scratch as part of a 4-member Angular team, architecting a reusable component library that reduced feature development time by 25%.</li>
+              <li>Integrated Razorpay and Stripe payment gateways with multi-currency support, improving checkout conversion by 18%.</li>
+              <li>Refactored legacy Angular modules with lazy loading and bundle splitting, achieving a 20% improvement in UI rendering speed.</li>
             </ul>
           </article>
           <article class="card">
-            <h3 class="card-title">Zenbasket E-commerce Platform</h3>
-            <p class="card-subtitle">Angular 15+, Node.js, PostgreSQL, Sequelize</p>
+            <h3 class="card-title">Centizen, Inc.</h3>
+            <p class="card-subtitle">Zenbasket E-commerce Platform | Angular 15+, TypeScript, RxJS, Node.js, PostgreSQL, Sequelize</p>
+            <p class="card-subtitle">Jan 2025 – Present</p>
             <ul class="card-list">
-              <li>Migrated a large legacy codebase to strict TypeScript, reducing production bugs by 30%.</li>
-              <li>Delivered 10+ reusable modules adopted across teams, cutting cross-team development time by 25%.</li>
-              <li>Optimized the load pipeline to reduce page load time from 5s to 1.5s, a 70% improvement.</li>
-              <li>Built multilingual i18n support across 4 storefronts and web push notifications using Service Workers.</li>
+              <li>Migrated a large legacy codebase to strict TypeScript, reducing production bugs by 30% and improving overall code robustness.</li>
+              <li>Designed and deployed 10+ reusable Angular components, services, and modules adopted across multiple teams.</li>
+              <li>Optimized the page load pipeline with modularization and lazy loading, slashing load times from 5s to 1.5s.</li>
+              <li>Delivered multilingual i18n support across 4 storefronts and built a real-time web push notification system with Service Workers.</li>
             </ul>
           </article>
         </div>
@@ -149,27 +190,12 @@ const structuredData = {
         </div>
       </section>
 
-      <section class="section fade-in" id="skills">
-        <div class="section-title"><h2>Skills & Tools</h2></div>
+      <section class="section fade-in" id="education">
+        <div class="section-title"><h2>Education</h2></div>
         <div class="card">
-          <div class="tag-grid">
-            <span class="badge">Angular 15+</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">RxJS</span>
-            <span class="badge">Ngrx</span>
-            <span class="badge">Angular Material</span>
-            <span class="badge">HTML5 / CSS3</span>
-            <span class="badge">Responsive Design</span>
-            <span class="badge">Node.js</span>
-            <span class="badge">Express.js</span>
-            <span class="badge">REST / GraphQL</span>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">Sequelize</span>
-            <span class="badge">Jest / Jasmine / Karma</span>
-            <span class="badge">Cypress</span>
-            <span class="badge">Git / GitLab / CI/CD</span>
-            <span class="badge">Agile / Scrum</span>
-          </div>
+          <p>P.S.R Engineering College — Bachelor of Engineering in Computer Science and Engineering</p>
+          <p><strong>CGPA:</strong> 8.62</p>
+          <p><strong>Graduation:</strong> 2019 – 2023</p>
         </div>
       </section>
 
@@ -210,10 +236,6 @@ const structuredData = {
               <strong>Phone</strong>
               <span>+91 7418794326</span>
             </div>
-            <div class="contact-item">
-              <strong>Education</strong>
-              <span>P.S.R Engineering College — B.E. Computer Science, CGPA 8.62</span>
-            </div>
           </div>
           <form class="card contact-form" id="contact-form">
             <h3 class="card-title">Send a message</h3>
@@ -252,11 +274,14 @@ const structuredData = {
       const emailjsUrl = 'https://api.emailjs.com/api/v1.0/email/send';
       const themeStorageKey = 'portfolio-theme';
 
-      const revealElements = document.querySelectorAll('.fade-in, .card, .section-title, .contact-item, .card-list li');
+      const revealElements = document.querySelectorAll('.fade-in, .card, .section-title, .contact-item, .card-list li, .experience-badge, .metric-bar');
       const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add('visible');
+          if (entry.target.classList.contains('experience-badge')) {
+            entry.target.classList.add('animated');
+          }
           observer.unobserve(entry.target);
         });
       }, { threshold: 0.16, rootMargin: '0px 0px -10% 0px' });

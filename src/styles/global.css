@@ -492,6 +492,133 @@ body {
   margin-top: 64px;
 }
 
+.experience-highlight {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(240px, 280px) 1fr;
+  align-items: center;
+}
+
+.experience-badge {
+  position: relative;
+  padding: 42px 26px;
+  border-radius: 36px;
+  background: rgba(68, 217, 255, 0.1);
+  border: 1px solid rgba(68, 217, 255, 0.18);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.16);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.experience-badge::before,
+.experience-badge::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.experience-badge::before {
+  width: 160px;
+  height: 160px;
+  top: -32px;
+  right: -40px;
+  background: rgba(255, 109, 112, 0.22);
+  filter: blur(30px);
+}
+
+.experience-badge::after {
+  width: 220px;
+  height: 220px;
+  bottom: -50px;
+  left: -36px;
+  background: rgba(68, 217, 255, 0.16);
+  filter: blur(32px);
+}
+
+.experience-badge span:first-child {
+  display: block;
+  font-size: clamp(4rem, 7vw, 6rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.experience-badge span:last-child {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+}
+
+.experience-badge.animated {
+  animation: pulseBadge 2.8s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.experience-metrics {
+  display: grid;
+  gap: 18px;
+}
+
+.metric {
+  display: grid;
+  gap: 10px;
+}
+
+.metric strong {
+  color: var(--text);
+  font-size: 0.97rem;
+}
+
+.metric-bar {
+  height: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.metric-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-alt));
+  transition: width 1.4s cubic-bezier(0.2, 0.8, 0.3, 1);
+  width: 0;
+}
+
+.metric-bar.visible span {
+  width: var(--fill);
+}
+
+.experience-copy {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+@media (max-width: 860px) {
+  .experience-highlight {
+    grid-template-columns: 1fr;
+  }
+}
+
 .section-title {
   display: flex;
   align-items: center;
