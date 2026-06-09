@@ -3,7 +3,8 @@ import '../styles/global.css';
 
 const pageTitle = 'Praveen A | Software Engineer';
 const pageDescription = 'Praveen A is an Angular-focused Software Engineer with 3+ years of experience building scalable enterprise applications and performance-driven SPAs.';
-const siteUrl = 'https://praveen-portfolio.example';
+const siteUrl = 'https://praveena.github.io/Portfolio';
+const basePath = import.meta.env.BASE_URL;
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -71,7 +72,7 @@ const structuredData = {
     <main class="container">
       <section class="hero fade-in" id="home">
         <div class="hero-image">
-          <img src="/profile.jpeg" alt="Profile photo of Praveen A" />
+          <img src={`${basePath}profile.jpeg`} alt="Profile photo of Praveen A" />
         </div>
         <div class="hero-content">
           <span class="subtle-label">Software Engineer • Angular Specialist</span>
@@ -82,7 +83,7 @@ const structuredData = {
             Angular Developer with 3+ years of experience building scalable SPAs using Angular 15+, TypeScript, RxJS, and Angular Material. Proven track record of reducing page load times by 70%, cutting production bugs by 30%, and shipping 12+ features per sprint in Agile teams.
           </p>
           <div class="cta-group">
-            <a class="button" href="/resume.pdf" download>Download Resume</a>
+            <a class="button" href={`${basePath}resume.pdf`} download>Download Resume</a>
             <a class="button-secondary" href="#contact">Contact Me</a>
           </div>
         </div>
