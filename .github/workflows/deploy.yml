@@ -5,9 +5,14 @@ on:
     branches:
       - Development
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_NODE_VERSION: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout code
@@ -33,3 +38,5 @@ jobs:
           publish_dir: ./dist
           cname: praveen-portfolio.example
           force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
