@@ -2,7 +2,7 @@
 
 Personal portfolio website for Praveen A — Angular Developer with 3+ years of experience building scalable SPAs and high-performance web applications.
 
-🌐 **Hosted:** [https://praveen-portfolio.example](https://praveen-portfolio.example)
+🌐 **Hosted:** [https://praveena.github.io/Portfolio](https://praveena.github.io/Portfolio)
 
 ## Features
 
