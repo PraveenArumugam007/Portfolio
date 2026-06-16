@@ -5,6 +5,11 @@ const pageTitle = 'Praveen A | Software Engineer';
 const pageDescription = 'Praveen A is an Angular-focused Software Engineer with 3+ years of experience building scalable enterprise applications and performance-driven SPAs.';
 const siteUrl = 'https://praveen-a.vercel.app';
 const basePath = import.meta.env.BASE_URL;
+
+// EmailJS credentials — set these as environment variables in Vercel dashboard
+const emailJsServiceId  = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID  ?? '';
+const emailJsTemplateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
+const emailJsPublicKey  = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY  ?? '';
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -418,7 +423,13 @@ const structuredData = {
               </a>
             </div>
           </div>
-          <form class="card contact-form reveal-right" id="contact-form">
+          <form
+            class="card contact-form reveal-right"
+            id="contact-form"
+            data-service-id={emailJsServiceId}
+            data-template-id={emailJsTemplateId}
+            data-public-key={emailJsPublicKey}
+          >
             <h3 class="card-title">Send a message</h3>
             <label class="form-group">
               <span class="form-label">Your name</span>
@@ -461,9 +472,9 @@ const structuredData = {
       const toolbarClose = document.getElementById('toolbar-close');
       const toolbarNav = document.getElementById('toolbar-nav');
       const toolbarBackdrop = document.getElementById('toolbar-backdrop');
-      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
-      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
-      const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
+      const serviceId  = form?.dataset.serviceId  ?? '';
+      const templateId = form?.dataset.templateId ?? '';
+      const publicKey  = form?.dataset.publicKey  ?? '';
       const emailjsUrl = 'https://api.emailjs.com/api/v1.0/email/send';
       const themeStorageKey = 'portfolio-theme';
 
