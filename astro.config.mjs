@@ -1,8 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://praveenarumugam007.github.io',
-  base: '/Portfolio/',
+  site: 'https://praveen-a.vercel.app',
   markdown: {
     syntaxHighlight: 'shiki',
   },
