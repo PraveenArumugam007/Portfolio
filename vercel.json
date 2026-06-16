@@ -1,7 +1,8 @@
 {
   "framework": "astro",
-  "buildCommand": "npx astro build",
-  "devCommand": "npx astro dev",
-  "installCommand": "npm install",
-  "outputDirectory": "dist"
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm ci",
+  "outputDirectory": "dist",
+  "nodeVersion": "18.x"
 }
