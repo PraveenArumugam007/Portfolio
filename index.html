@@ -180,10 +180,10 @@ Astro
             template_id: templateId,
             user_id: publicKey,
             template_params: {
-              from_name: data.get('name')?.toString() || '',
-              from_email: data.get('email')?.toString() || '',
+              name: data.get('name')?.toString() || '',
+              email: data.get('email')?.toString() || '',
               message: data.get('message')?.toString() || '',
-              to_email: 'praveenrumugam.job@gmail.com',
+              time: new Date()              
             },
           };
 
