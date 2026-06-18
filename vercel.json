@@ -3,6 +3,5 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm ci",
-  "outputDirectory": "dist",
-  "nodeVersion": "18.x"
+  "outputDirectory": "dist"
 }
