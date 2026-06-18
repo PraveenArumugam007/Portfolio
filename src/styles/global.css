@@ -438,6 +438,19 @@ body {
   .hero-copy {
     max-width: none;
   }
+
+  .section {
+    position: relative;
+    top: auto;
+    min-height: auto;
+    margin-top: 24px;
+    padding: 28px 18px 40px;
+    border-radius: 24px;
+  }
+
+  .section+.section {
+    margin-top: 20px;
+  }
 }
 
 .hero {
@@ -658,7 +671,44 @@ body {
 }
 
 .section {
-  margin-top: 64px;
+  position: sticky;
+  top: 92px;
+  min-height: calc(100svh - 92px);
+  z-index: 1;
+  margin-top: 0;
+  padding: 48px 0 72px;
+}
+
+.section+.section {
+  margin-top: -18svh;
+}
+
+main>section.section:nth-of-type(2) {
+  z-index: 2;
+}
+
+main>section.section:nth-of-type(3) {
+  z-index: 3;
+}
+
+main>section.section:nth-of-type(4) {
+  z-index: 4;
+}
+
+main>section.section:nth-of-type(5) {
+  z-index: 5;
+}
+
+main>section.section:nth-of-type(6) {
+  z-index: 6;
+}
+
+main>section.section:nth-of-type(7) {
+  z-index: 7;
+}
+
+main>section.section:nth-of-type(8) {
+  z-index: 8;
 }
 
 .project-card {
