@@ -397,24 +397,54 @@ body {
   }
 
   .hero {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     gap: 32px;
+    padding: 36px 0 40px;
   }
 
   .hero-image {
     margin: 0 auto;
+    width: 100%;
+    grid-area: auto;
   }
 
-  .hero-image img {
-    width: min(320px, 100%);
+  .hero-content {
+    grid-area: auto;
+  }
+
+  .hero-profile-card {
+    width: min(100%, 340px);
+    padding: 22px 18px 20px;
+  }
+
+  .hero-profile-copy h2 {
+    font-size: 1.45rem;
+  }
+
+  .hero-profile-copy span {
+    font-size: 0.88rem;
+  }
+
+  .hero-profile-card:hover {
+    animation: heroCardSpin 700ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 10vw, 3.4rem);
+  }
+
+  .hero-copy {
+    max-width: none;
   }
 }
 
 .hero {
   position: relative;
-  padding: 96px 0 64px;
+  padding: 56px 0 56px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1.5fr;
   grid-template-areas: "content image";
   align-items: center;
   gap: 48px;
@@ -444,24 +474,115 @@ body {
   grid-area: image;
 }
 
-.hero-image img {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: 36px;
-  border: 1px solid var(--border);
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.22);
-  transition: transform 320ms ease, box-shadow 320ms ease, filter 320ms ease;
+.hero-profile-card {
+  width: min(100%, 330px);
+  padding: 26px 22px 24px;
+  border-radius: 24px;
+  background: #050505;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.3);
+  display: grid;
+  gap: 18px;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 320ms ease;
+  transform-origin: center center;
 }
 
-.hero-image img:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 50px 140px rgba(68, 217, 255, 0.2);
-  filter: saturate(1.08);
+.hero-profile-card:hover {
+  animation: heroCardSpin 1800ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+
+.hero-profile-media {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #111;
+}
+
+.hero-profile-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  transition: transform 320ms ease, filter 320ms ease;
+}
+
+.hero-profile-card:hover .hero-profile-media img {
+  transform: scale(1.03);
+  filter: saturate(1.05);
+}
+
+@keyframes heroCardSpin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.hero-profile-copy {
+  display: grid;
+  gap: 10px;
+  color: #f3f3f3;
+}
+
+.hero-profile-copy h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.hero-profile-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+}
+
+.hero-profile-copy span {
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.7;
+  font-size: 0.92rem;
 }
 
 .hero-image.reveal-zoom {
   transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 860px) {
+  .hero-profile-card {
+    width: min(100%, 320px);
+  }
+
+  .hero-profile-card:hover {
+    animation: heroCardSpin 1800ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    padding: 72px 0 48px;
+  }
+
+  .hero-image {
+    margin: 0 auto;
+    width: 100%;
+    grid-area: auto;
+  }
+
+  .hero-content {
+    grid-area: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 10vw, 3.4rem);
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
 }
 
 .hero-content {
@@ -517,6 +638,7 @@ body {
 .button {
   background: linear-gradient(135deg, var(--primary-alt), var(--primary));
   color: var(--button-text);
+  cursor: pointer;
 }
 
 .button-secondary {

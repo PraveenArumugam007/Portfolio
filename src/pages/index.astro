@@ -83,7 +83,15 @@ const structuredData = {
     <main class="container">
       <section class="hero" id="home">
         <div class="hero-image reveal-zoom" style="--reveal-delay: 0ms;">
-          <img src={`${basePath}profile.jpeg`} alt="Profile photo of Praveen A" />
+          <div class="hero-profile-card">
+            <div class="hero-profile-media">
+              <img src={`${basePath}profile.jpeg`} alt="Profile photo of Praveen A" />
+            </div>
+            <div class="hero-profile-copy">
+              <h2>Praveen A</h2>
+              <span>A Software Developer who has developed countless innovative solutions.</span>
+            </div>
+          </div>
         </div>
         <div class="hero-content">
           <span class="subtle-label">Senior Full Stack Software Developer • Angular Specialist</span>
