@@ -66,6 +66,7 @@ const structuredData = {
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
+          <a href="#achievements">Wins</a>
           <a href="#education">Education</a>
           <a href="#awards">Certifications</a>
           <a href="#contact">Contact</a>
@@ -104,6 +105,28 @@ const structuredData = {
           <div class="cta-group">
             <a class="button" href={`${basePath}resume.pdf`} download>Download Resume</a>
             <a class="button-secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="hero-stats reveal-up" style="--reveal-delay: 450ms;">
+            <div class="stat">
+              <span class="stat-number"><em>70</em>%</span>
+              <span class="stat-label">Load Time Cut</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number"><em>80</em>%</span>
+              <span class="stat-label">AWS S3 Saved</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number"><em>30</em>%</span>
+              <span class="stat-label">Bugs Reduced</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number"><em>85</em>%+</span>
+              <span class="stat-label">Test Coverage</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number"><em>12</em>+</span>
+              <span class="stat-label">Features / Sprint</span>
+            </div>
           </div>
         </div>
       </section>
@@ -343,16 +366,28 @@ const structuredData = {
               <li>Delivered multilingual i18n support across live client storefronts and built a real-time web push notification system using Service Workers and PWA standards.</li>
             </ul>
           </article>
-          <article class="card work-card reveal-right" style="--reveal-delay: 140ms;">
-            <h3 class="card-title">Impact Highlights</h3>
-            <p class="card-subtitle">Architecture, payments, performance, and testing</p>
-            <ul class="card-list">
-              <li>Integrated Razorpay and Stripe payment gateways with multi-currency support, improving checkout conversion by 18%.</li>
-              <li>Achieved 85%+ unit test coverage using Jest, Jasmine, and Karma.</li>
-              <li>Worked in an Agile/Scrum environment delivering 12+ features per sprint.</li>
-              <li>Maintained accessibility, responsiveness, and international readiness across client storefronts.</li>
-            </ul>
-          </article>
+          <div class="reveal-right" style="--reveal-delay: 140ms; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="card metric-card">
+              <span class="metric-value">70%</span>
+              <span class="metric-label">Load Speedup</span>
+              <p class="metric-desc">Cut page load times from 5s to 1.5s via lazy loading and bundle splitting.</p>
+            </div>
+            <div class="card metric-card">
+              <span class="metric-value">80%</span>
+              <span class="metric-label">AWS S3 Saved</span>
+              <p class="metric-desc">Migrated media assets routing and storage to Cloudflare R2, cutting costs.</p>
+            </div>
+            <div class="card metric-card">
+              <span class="metric-value">30%</span>
+              <span class="metric-label">Bugs Reduced</span>
+              <p class="metric-desc">Enhanced system reliability through strict type enforcement and test suites.</p>
+            </div>
+            <div class="card metric-card">
+              <span class="metric-value">18%</span>
+              <span class="metric-label">Conversion Lift</span>
+              <p class="metric-desc">Integrated Stripe and Razorpay gateways supporting multi-currency checkouts.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -367,8 +402,22 @@ const structuredData = {
             <h3 class="card-title">Zenbasket Marketing Portal</h3>
             <p class="card-subtitle">Angular, TypeScript, RxJS, Stripe, Razorpay</p>
             <p>
-              Collaborated within a 4-member Angular development team to build a marketing portal from the ground up, delivering a scalable and maintainable frontend architecture. Designed a reusable component library that accelerated feature development and improved consistency across the application.
+              Collaborated within a 4-member Angular development team to build the Zenbasket Marketing Portal from the ground up, establishing a scalable and maintainable frontend architecture. Designed and implemented a reusable component library, significantly accelerating feature development and enhancing consistency across the application. Integrated Stripe and Razorpay payment gateways with multi-currency support, facilitating seamless global transactions and boosting checkout conversion rates.
             </p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <span class="project-stat-val">16 Mos</span>
+                <span class="project-stat-label">Duration</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-val">4 Devs</span>
+                <span class="project-stat-label">Team Size</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-val">+18%</span>
+                <span class="project-stat-label">Conversion</span>
+              </div>
+            </div>
           </article>
           <article class="card project-card reveal-right" style="--reveal-delay: 180ms;">
             <div class="project-card-header">
@@ -378,8 +427,22 @@ const structuredData = {
             <h3 class="card-title">Zenbasket - E-Commerce Platform</h3>
             <p class="card-subtitle">Angular, TypeScript, Node.js, PostgreSQL, Sequelize, PWA</p>
             <p>
-              Led modernization of the e-commerce platform by migrating legacy JavaScript code to strict TypeScript, improving code quality and maintainability. Improved application performance through modular architecture, lazy loading, and bundle optimization, reducing page load times from 5 seconds to 1.5 seconds.
+              Led the modernization of the Zenbasket e-commerce platform by migrating legacy JavaScript code to TypeScript, enhancing code quality and maintainability with strict type enforcement. Designed and developed reusable Angular components, services, and shared modules, accelerating feature delivery across multiple teams. Improved application performance via modular architecture, lazy loading, and bundle optimization, reducing page load times from 5 seconds to 1.5 seconds. Implemented multilingual (i18n) support across multiple client storefronts, enabling seamless real-time language switching and enhancing accessibility for international users.
             </p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <span class="project-stat-val">40 Mos</span>
+                <span class="project-stat-label">Duration</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-val">70%</span>
+                <span class="project-stat-label">Load Cut</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-val">80%</span>
+                <span class="project-stat-label">Cost Saved</span>
+              </div>
+            </div>
           </article>
           <article class="card project-card reveal-up" style="--reveal-delay: 240ms;">
             <div class="project-card-header">
@@ -389,19 +452,84 @@ const structuredData = {
             <h3 class="card-title">GetZenbasket</h3>
             <p class="card-subtitle">Astro, HTML, CSS, JavaScript, SEO</p>
             <p>
-              Developed and maintained the static landing site for the Zenbasket e-commerce platform. Designed 40+ pages with a user-friendly experience, then migrated the site from plain HTML, CSS, and JavaScript to Astro to improve SEO performance and frontend maintainability.
+              Developed and maintained the static landing site "GetZenbasket" for the Zenbasket E-commerce Platform as a Front-end Engineer. Designed over 40 pages, ensuring a visually appealing and user-friendly experience on the website. Transitioned the site’s technology from plain HTML, CSS, and JavaScript to Astro, optimizing for improved SEO performance and frontend maintainability.
             </p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <span class="project-stat-val">9 Mos</span>
+                <span class="project-stat-label">Duration</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-val">40+</span>
+                <span class="project-stat-label">Pages</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-val">Astro</span>
+                <span class="project-stat-label">Framework</span>
+              </div>
+            </div>
           </article>
+        </div>
+      </section>
+
+      <section class="section" id="achievements">
+        <div class="section-title reveal-up"><h2>Key Achievements & Wins</h2></div>
+        <div class="achievements-grid">
+          <div class="card achievement-card reveal-left" style="--reveal-delay: 50ms;">
+            <div class="achievement-num">70%</div>
+            <h3 class="achievement-title">Page Load Speedup</h3>
+            <p class="achievement-desc">Optimized load performance from 5.0s to 1.5s via lazy loading, modularization, and bundle splitting techniques on storefronts.</p>
+          </div>
+          <div class="card achievement-card reveal-up" style="--reveal-delay: 100ms;">
+            <div class="achievement-num">80%</div>
+            <h3 class="achievement-title">S3 Cost Reduction</h3>
+            <p class="achievement-desc">Migrated e-commerce asset routing and media storage from AWS S3 to Cloudflare R2, significantly cutting bandwidth and hosting costs.</p>
+          </div>
+          <div class="card achievement-card reveal-right" style="--reveal-delay: 150ms;">
+            <div class="achievement-num">25%</div>
+            <h3 class="achievement-title">Faster Feature Dev</h3>
+            <p class="achievement-desc">Designed and implemented 10+ reusable Angular modules and components adopted across multiple development teams to streamline workflow.</p>
+          </div>
+          <div class="card achievement-card reveal-left" style="--reveal-delay: 200ms;">
+            <div class="achievement-num">18%</div>
+            <h3 class="achievement-title">Checkout Conversion Lift</h3>
+            <p class="achievement-desc">Integrated Stripe and Razorpay payment gateways with multi-currency capabilities to support global, frictionless transactions.</p>
+          </div>
+          <div class="card achievement-card reveal-up" style="--reveal-delay: 250ms;">
+            <div class="achievement-num">30%</div>
+            <h3 class="achievement-title">Production Bug Reduction</h3>
+            <p class="achievement-desc">Successfully migrated legacy JavaScript services to strict TypeScript and integrated testing to prevent regressions.</p>
+          </div>
+          <div class="card achievement-card reveal-right" style="--reveal-delay: 300ms;">
+            <div class="achievement-num">85%+</div>
+            <h3 class="achievement-title">Unit Test Coverage</h3>
+            <p class="achievement-desc">Maintained robust, comprehensive unit and integration test coverage across all major platform services using Jest, Jasmine, and Karma.</p>
+          </div>
         </div>
       </section>
 
       <section class="section" id="education">
         <div class="section-title reveal-up"><h2>Education</h2></div>
         <div class="card reveal-zoom">
-          <p><strong>B.Tech / B.E.</strong> — P.S.R. Engineering College, Sivakasi</p>
-          <p><strong>Graduation:</strong> 2019 – 2023</p>
-          <p><strong>Higher Secondary:</strong> XIIth, English — 2017 – 2019</p>
-          <p><strong>Secondary:</strong> Xth, English — 2017</p>
+          <div style="display: grid; gap: 20px;">
+            <div>
+              <p style="margin-bottom: 4px;"><strong>B.Tech / B.E. in Computer Science and Engineering (CSE)</strong></p>
+              <p style="margin-bottom: 4px; color: var(--muted-strong);">P.S.R. Engineering College, Sivakasi</p>
+              <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">2019 – 2023 &middot; Grade: 8.6/10</p>
+            </div>
+            <hr style="border: 0; border-top: 1px solid var(--border); margin: 0;" />
+            <div>
+              <p style="margin-bottom: 4px;"><strong>Higher Secondary School (XIIth)</strong></p>
+              <p style="margin-bottom: 4px; color: var(--muted-strong);">Tamil Nadu State Board &middot; English Medium</p>
+              <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Graduated: 2019 &middot; Marks: 79.8%</p>
+            </div>
+            <hr style="border: 0; border-top: 1px solid var(--border); margin: 0;" />
+            <div>
+              <p style="margin-bottom: 4px;"><strong>Secondary School Leaving Certificate (Xth)</strong></p>
+              <p style="margin-bottom: 4px; color: var(--muted-strong);">Tamil Nadu State Board &middot; English Medium</p>
+              <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Completed: 2017 &middot; Marks: 98.0%</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -547,7 +675,7 @@ const structuredData = {
             }
           }
         });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.04, rootMargin: '0px 0px -20px 0px' });
 
       revealElements.forEach((element) => {
         if (!element.style.getPropertyValue('--reveal-delay')) {
@@ -587,7 +715,7 @@ const structuredData = {
         mouseY = event.clientY;
       });
 
-      const hoverTargets = document.querySelectorAll('a, button, input, textarea, img, .button, .button-secondary, .toolbar-toggle, .theme-toggle, .toolbar-nav a');
+      const hoverTargets = document.querySelectorAll('a, button, input, textarea, img, .button, .button-secondary, .toolbar-toggle, .theme-toggle, .toolbar-nav a, .card, .stat, .project-stat');
       hoverTargets.forEach((target) => {
         target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
         target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));

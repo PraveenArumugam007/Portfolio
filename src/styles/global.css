@@ -443,13 +443,13 @@ body {
     position: relative;
     top: auto;
     min-height: auto;
-    margin-top: 24px;
-    padding: 28px 18px 40px;
+    margin-top: 0;
+    padding: 32px 18px 40px;
     border-radius: 24px;
   }
 
   .section+.section {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -667,49 +667,19 @@ body {
 
 .section,
 .hero {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 92px;
 }
 
 .section {
-  position: sticky;
-  top: 92px;
-  min-height: calc(100svh - 92px);
+  position: relative;
   z-index: 1;
-  margin-top: 0;
-  padding: 48px 0 72px;
+  padding: 48px 0 48px;
 }
 
 .section+.section {
-  margin-top: -18svh;
+  margin-top: 0;
 }
 
-main>section.section:nth-of-type(2) {
-  z-index: 2;
-}
-
-main>section.section:nth-of-type(3) {
-  z-index: 3;
-}
-
-main>section.section:nth-of-type(4) {
-  z-index: 4;
-}
-
-main>section.section:nth-of-type(5) {
-  z-index: 5;
-}
-
-main>section.section:nth-of-type(6) {
-  z-index: 6;
-}
-
-main>section.section:nth-of-type(7) {
-  z-index: 7;
-}
-
-main>section.section:nth-of-type(8) {
-  z-index: 8;
-}
 
 .project-card {
   position: relative;
@@ -1100,9 +1070,6 @@ main>section.section:nth-of-type(8) {
 }
 
 /* Skills section layout */
-.skills-section {
-  padding: 48px 0;
-}
 
 .skill-section-block {
   display: grid;
@@ -1425,4 +1392,178 @@ main>section.section:nth-of-type(8) {
 
 .footer-copy {
   color: var(--muted);
+}
+
+/* ==========================================================================
+   Quantified Portfolio CSS (Stats, Key Achievements, and Metrics Grids)
+   ========================================================================== */
+
+/* Hero Stats Bar */
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.stat-number em {
+  color: var(--primary);
+  font-style: normal;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* Experience Metrics Cards */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.metric-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+  min-width: 0;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(68, 217, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(68, 217, 255, 0.08);
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.metric-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Project Metrics Row */
+.project-stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.project-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.project-stat-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.project-stat-label {
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Achievements Section Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.achievement-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20px -30px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(68, 217, 255, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.achievement-num {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.achievement-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.achievement-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .hero-stats {
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .stat-number {
+    font-size: 1.6rem;
+  }
 }
